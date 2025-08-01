@@ -1,64 +1,80 @@
-# Virtual Mouse
+<!-- Title with gradient effect -->
+<h1 align="center" style="font-weight:bold">
+  🖥️✨ Virtual Mouse using Hand Gestures ✨🖱️
+</h1>
 
-This repository provides a Python-based implementation for controlling a computer's mouse actions using hand gestures, leveraging OpenCV, MediaPipe, and PyAutoGUI. The application detects specific hand gestures through a webcam and maps them to corresponding mouse actions like moving the cursor, left-clicking, right-clicking, double-clicking, or even taking screenshots.
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20With-Python%203.7+-blueviolet?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/Computer%20Vision-OpenCV-green?style=for-the-badge&logo=opencv" />
+  <img src="https://img.shields.io/badge/Hand%20Tracking-MediaPipe-orange?style=for-the-badge&logo=google" />
+  <img src="https://img.shields.io/badge/Mouse%20Control-PyAutoGUI-yellow?style=for-the-badge" />
+</p>
 
-## Features
+<p align="center">
+  Control your computer with hand gestures using just a webcam and AI 🤯  
+  <br><br>
+  <strong>No hardware, no touch — just gestures!</strong>
+</p>
 
-- **Mouse Movement**: Control the mouse pointer by moving your index finger in the camera's field of view.
-- **Left Click**: Perform a left-click gesture to simulate a left mouse button click.
-- **Right Click**: Perform a right-click gesture to simulate a right mouse button click.
-- **Double Click**: Trigger a double-click using a specific hand gesture.
-- **Screenshot**: Capture the screen instantly with a unique hand gesture.
-- **Real-time Processing**: All gestures are detected in real-time, ensuring smooth interaction.
+---
 
-## Installation
+## 🧠 Overview
 
-### Prerequisites
+**Virtual Mouse** is an AI-powered desktop control system that transforms your webcam into a gesture-based mouse. Using **MediaPipe**, **OpenCV**, and **PyAutoGUI**, you can:
 
-Make sure you have the following installed:
+- Move the mouse 🖱️
+- Click ✨
+- Double-click 👆👆
+- Take screenshots 📸  
+All in real-time — with just your hand!
+
+---
+
+## 🔥 Demo Preview
+
+<p align="center">
+  <!-- Replace with your GIF -->
+  <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="demo" width="600"/>
+</p>
+
+> _Add a real demo GIF to impress even more!_  
+> Record using OBS or ScreenRec and upload to GitHub/GIF hosting.
+
+---
+
+## ⚙️ Tech Stack
+
+| Technology     | Description                                      |
+|----------------|--------------------------------------------------|
+| 🐍 Python      | Programming language for logic & integration     |
+| 🖐️ MediaPipe  | Hand tracking & landmark detection               |
+| 🎥 OpenCV      | Camera access & video rendering                  |
+| 🧠 PyAutoGUI   | Mouse automation with gesture mapping            |
+| 📐 NumPy       | Coordinate math & gesture thresholds             |
+
+---
+
+## ✋ Supported Gestures
+
+| Gesture | Action           | Description |
+|--------|------------------|-------------|
+| 👉     | Mouse Movement    | Move index finger to move cursor |
+| 👌     | Left Click        | Index + thumb pinch |
+| ✌️     | Screenshot        | Index & thumb closed, others open |
+| ❌     | Quit              | Press `q` on your keyboard |
+
+---
+
+## 🛠️ Installation
+
+### 🔧 Requirements
 - Python 3.7+
-- Webcam for video input
+- Webcam (Built-in or USB)
 
-### Install Dependencies
+### 📦 Setup
 
-Install the required libraries using pip:
-```bash
-pip install opencv-python mediapipe pyautogui pynput numpy
-```
-
-### Usage
-
-Clone this repository:
 ```bash
 git clone https://github.com/Sraghav97/virtual-mouse.git
 cd virtual-mouse
-```
-
-Run the application:
-```bash
+pip install -r requirements.txt
 python main.py
-```
-
-Use the following gestures to perform actions:
-- **Mouse Movement**: Move your index finger to control the cursor.
-- **Left Click**: Make a gesture with the index finger and thumb positioned close, and the other fingers extended.
-- **Right Click**: A gesture with specific alignment of fingers as detected by the system logic.
-- **Double Click**: A combined gesture detected by the system logic.
-- **Screenshot**: Close your thumb and index finger while keeping other fingers extended.
-
-Press 'q' to exit the application.
-
-## File Descriptions
-
-- **main.py**: The main entry point for the application. It initializes the webcam feed, detects hand landmarks, and maps gestures to mouse actions.
-- **utils.py**: A helper module providing utility functions:
-  - `get_angle()`: Calculates the angle between three points.
-  - `get_distance()`: Computes the normalized distance between two points.
-- **gestures.ipynb**: A Jupyter Notebook file (if applicable) to experiment with and visualize gesture detection concepts.
-
-## How It Works
-
-- **Hand Detection**: Uses MediaPipe's Hands module to detect hand landmarks in the webcam feed.
-- **Gesture Analysis**: Processes the positions and angles of hand landmarks to identify specific gestures.
-- **Action Mapping**: Maps recognized gestures to mouse actions (move, click, double-click, or screenshot).
-- **Real-time Feedback**: Displays the video feed with visual indicators for detected gestures and actions performed.
