@@ -33,14 +33,8 @@ All in real-time — with just your hand!
 ## 🔥 Demo Preview
 
 <p align="center">
-  <!-- Replace with your GIF -->
   <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="demo" width="600"/>
 </p>
-
-> _Add a real demo GIF to impress even more!_  
-> Record using OBS or ScreenRec and upload to GitHub/GIF hosting.
-
----
 
 ## ⚙️ Tech Stack
 
